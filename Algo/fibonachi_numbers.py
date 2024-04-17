@@ -11,6 +11,8 @@ def fib(n):
 
 
 if __name__ == "__main__":
-    n = 127923
-    print(fib(n))
+    for n in range(44):
+        print(n, fib(n))
+        print(n, fib_bad(n))
+        print()
     # print(fib_bad(n))

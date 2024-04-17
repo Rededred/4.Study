@@ -1,0 +1,2 @@
+from fu import main
+
