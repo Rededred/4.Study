@@ -1,3 +1,7 @@
+import time
+# import matplotlib.pyplot as plt
+
+
 def fib_bad(n):
     if n <= 1:
         return n
@@ -8,11 +12,20 @@ def fib(n):
     for i in range(2, n+1):
         fib[i] = fib[i-1] + fib[i-2]
     return fib[n]
-
+# fib = lambda n: (lambda f: f(n, [0, 1] + [0] * (n-1)))(lambda i, fib: fib[i] if i <= 1 else fib[i-1] + fib[i-2])
+# надо бы ещё подумать над лямбдой
 
 if __name__ == "__main__":
-    for n in range(44):
+    ra = int(input())
+    for n in range(ra+1):
+        t1 = time.time()
         print(n, fib(n))
+        t2 = time.time()
+        print(f'Скорость хорошей функции: {t2-t1} секунд')
         print(n, fib_bad(n))
+        t3 = time.time()
+        print(f'Скорость плохой функции: {t3-t1} секунд')
         print()
-    # print(fib_bad(n))
+
+
+
