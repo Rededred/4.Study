@@ -15,4 +15,4 @@ def try3(el_prev, el):
 
 print(reduce(try1, li))
 print(reduce(try2, li))
-print(reduce(try3, li))
+# print(reduce(try3, li))
